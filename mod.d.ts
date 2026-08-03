@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2026 The Stdlib Authors.
@@ -16,28 +16,35 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
+
+import { complex64ndarray } from '@stdlib/types/ndarray';
 
 /**
-* Fill a one-dimensional single-precision complex floating-point ndarray with linearly spaced numeric elements which increment by `1` starting from zero.
+* Fills a one-dimensional single-precision complex floating-point ndarray with linearly spaced numeric elements which increment by `1` starting from zero.
 *
-* @module @stdlib/blas-ext-base-ndarray-czero-to
+* ## Notes
+*
+* -   The function expects the following ndarrays:
+*
+*     -   a one-dimensional input ndarray.
+*
+* @param arrays - array-like object containing ndarrays
+* @returns input ndarray
 *
 * @example
 * var Complex64Vector = require( '@stdlib/ndarray-vector-complex64' );
-* var czeroTo = require( '@stdlib/blas-ext-base-ndarray-czero-to' );
 *
 * var x = new Complex64Vector( [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ] );
 *
 * var out = czeroTo( [ x ] );
 * // returns <ndarray>[ <Complex64>[ 0.0, 0.0 ], <Complex64>[ 1.0, 0.0 ], <Complex64>[ 2.0, 0.0 ], <Complex64>[ 3.0, 0.0 ] ]
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function czeroTo( arrays: [ complex64ndarray ] ): complex64ndarray;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = czeroTo;
